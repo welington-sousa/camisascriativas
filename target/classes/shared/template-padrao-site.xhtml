@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+	
+	<head>
+		<meta charset="UTF-8" />	
+		<title>Camisas Criativas</title>
+	
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="#{request.contextPath}/assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="#{request.contextPath}/assets/css/bootstrap-theme.min.css" />
+		
+		<!-- style -->
+		<link rel="stylesheet" href="#{request.contextPath}/assets/css/home.css" />
+		<link rel="stylesheet" href="#{request.contextPath}/assets/css/forms.css" />
+	</head>
+
+	<body>
+		<ui:insert name="cabecalho">
+				<ui:include src="/cabecalho.xhtml"></ui:include>
+		</ui:insert>
+	
+		<ui:insert name="conteudo"/>
+
+		<ui:insert name="rodape">
+				<ui:include src="/rodape.xhtml"></ui:include>
+		</ui:insert>
+	
+		<script src="#{request.contextPath}/assets/js/jquery-2.1.4.min.js"></script>
+		<script src="#{request.contextPath}/assets/js/bootstrap.min.js"></script>
+	</body>
+</html>
