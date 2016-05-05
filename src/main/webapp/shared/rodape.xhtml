@@ -1,8 +1,26 @@
-<footer class="footer">
-	<div class="container-fluid">
-		<ol class="breadcrumb"><li><a href="#"> Camisas Criativas</a></li></ol>
-		<ul class="pager">
-			<li class="next"><a href="#"> Topo <span class="glyphicon glyphicon-arrow-up"></span></a></li>
-		</ul>
-	</div>
-</footer>
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+	<footer class="footer">
+		<div class="container-fluid">
+			<ol class="breadcrumb">
+				<li>
+					<a href='#'>© 2016 Camisas Criativas</a>
+				</li>
+			</ol>
+			
+			<ul class="pager">
+				<li class="next">
+					<a href="#"> Topo 
+						<span class="glyphicon glyphicon-arrow-up"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+
+</ui:composition>

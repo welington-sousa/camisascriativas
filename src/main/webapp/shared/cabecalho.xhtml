@@ -1,49 +1,113 @@
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<div class="navbar-header">
-
-			<button type="button" class="navbar-toggle collapsed"
-				data-toggle="collapse" data-target="#menu" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="index.html">Camisas Criativas</a>
-		</div>
-
-		<div class="collapse navbar-collapse" id="menu">
-			<!-- <ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-							aria-expanded="false">Site <span class="caret"></span></a>
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+	
+	<div class="container">
+		<header class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+							data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						
+						<span class="sr-only">Toggle navigation</span> 
+						<span class="icon-bar"></span> 
+						<span class="icon-bar"></span> 
+						<span class="icon-bar"></span>
+					</button>
+					
+					<a class="navbar-brand" href='${linkTo[HomeController].index}'>
+					Camisas Criativas</a>
+				</div>
+		
+				<div>
+					<ul class="nav navbar-nav">
+						<li class="dropdown active">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-home"></span>
+								<b class="caret"></b>
+							</a>
 							<ul class="dropdown-menu">
-								<li><a href="#{request.contextPath}/produtos/form-add.xhtml"><span
-										class="glyphicon glyphicon-plus-sign"></span> Adicionar produto</a></li>
-								<li><a href="#{request.contextPath}/produtos/list.xhtml"><span
-										class="glyphicon glyphicon-menu-hamburger"></span> Listar produtos</a></li>
-								<li role="separator" class="divider"></li>
-								<li><a href="#{request.contextPath}/fornecedor/form-add.xhtml"><span
-										class="glyphicon glyphicon-plus-sign"></span> Adicionar fornecedor</a></li>
-								<li><a href="#{request.contextPath}/fornecedor/list.xhtml"><span
-										class="glyphicon glyphicon-menu-hamburger"></span> Listar fornecedores</a></li>
-								<li role="separator" class="divider"></li>
-								<li><a href="#{request.contextPath}/cliente/form-add.xhtml"><span
-										class="glyphicon glyphicon-plus-sign"></span> Adicionar cliente</a></li>
-								<li><a href="#{request.contextPath}/cliente/list.xhtml"><span
-										class="glyphicon glyphicon-menu-hamburger"></span> Listar clientes</a></li>
-								<li role="separator" class="divider"></li>
-							</ul></li>
-					</ul>-->
+								<li>
+									<a href='${linkTo[CamisasController].femininas}'>
+										<span class="glyphicon glyphicon-list-alt"></span>
+										Roupas Femininas
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#">
+										<span class="glyphicon glyphicon-list-alt"></span>	Roupas Masculinas
+									</a>
+								</li>
+								<li class="divider"></li>
+								<li><a href="#">
+									<span class="glyphicon glyphicon-list-alt"></span>
+									Roupas Infatis</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+		
+				<div id="carrinho login" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a title="carrinho de compras" href='#'>
+								<c:if test="${empty carrinho or carrinho.totalDeItens eq 0 }">
+									<b>0</b>
+									<span class="glyphicon glyphicon-shopping-cart"></span>
+								</c:if>
+								<c:if test="${carrinho.totalDeItens > 0}"> 
+									<b>${carrinho.totalDeItens}</b>
+									<span class="glyphicon glyphicon-shopping-cart"></span>
+								</c:if>
+							</a>
+						</li>							
+						<li class="active">
+							<c:if test="${empty usuarioLogado or not usuarioLogado.logado}">
+								<li class="active">
+										
+									<a href='#' title="logar no sistema" class="dropdown-toggle" data-toggle="dropdown"> 
+										<i class="glyphicon glyphicon-user"></i> Olá
+										<span class="caret"></span>
+									</a>
+									
+									<ul class="dropdown-menu">
+										<li>
+											<a title="entrar" href='${linkTo[LoginController].loginForm}'>
+												<span class="glyphicon glyphicon-log-in"></span>
+											</a>
+										</li>
+									</ul>
+								</li>		
+							</c:if>	
 
-			<ul class="nav nav-tabs">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">SVN</a></li>
-				<li><a href="#">iOS</a></li>
-				<li><a href="#">VB.Net</a></li>
-				<li><a href="#">Java</a></li>
-				<li><a href="#">PHP</a></li>
-			</ul>
-
-		</div>
-	</div>
-</nav>
+							<c:if test="${usuarioLogado.logado}">
+								<li class="active">
+										
+									<a href='#' title="logar no sistema" class="dropdown-toggle" data-toggle="dropdown"> 
+										<i class="glyphicon glyphicon-user"></i> Olá, ${usuarioLogado.nome}
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a title="sair" href='${linkTo[LoginController].sair}'>
+												<span class="glyphicon glyphicon-log-out"></span>
+											</a>
+										</li>
+									</ul>	
+								</li>
+							</c:if>
+						</li>
+					</ul>
+		
+					<form action='${linkTo[CamisasController].busca}' class="navbar-form navbar-right">
+						<!--  <input type="search" class="form-control" name="nome" id="busca" placeholder="Buscar por produtos">-->
+					</form>
+				</div>
+			</div>
+		</header>
+	</div>	
+</ui:composition>
