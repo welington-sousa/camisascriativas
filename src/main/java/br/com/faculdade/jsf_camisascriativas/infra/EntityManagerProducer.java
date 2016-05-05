@@ -1,4 +1,4 @@
-package br.com.faculdade.jsf_controle_estoque.infra;
+package br.com.faculdade.jsf_camisascriativas.infra;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;

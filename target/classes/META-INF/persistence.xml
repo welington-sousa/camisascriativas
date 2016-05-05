@@ -3,10 +3,10 @@
   <persistence-unit name="default" transaction-type="JTA">
   	<description>Dev persistence unit</description>
   	<provider>org.hibernate.ejb.HibernatePersistence</provider>
-  	<jta-data-source>java:jboss/datasources/ControleEstoqueDS</jta-data-source>
-    <class>br.com.faculdade.jsf_controle_estoque.models.Produto</class>
-    <class>br.com.faculdade.jsf_controle_estoque.models.Fornecedor</class>
-    <class>br.com.faculdade.jsf_controle_estoque.models.Cliente</class>
+  	<jta-data-source>java:jboss/datasources/ProjetointerdisciplinarDS</jta-data-source>
+    <class>br.com.faculdade.jsf_camisascriativas.models.Produto</class>
+    <class>br.com.faculdade.jsf_camisascriativas.models.Fornecedor</class>
+    <class>br.com.faculdade.jsf_camisascriativas.models.Cliente</class>
     <properties>
       <property name="hibernate.show_sql" value="true"/>
       <property name="hibernate.format_sql" value="true"/>

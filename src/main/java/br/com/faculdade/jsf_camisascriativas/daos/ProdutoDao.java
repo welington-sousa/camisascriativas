@@ -1,11 +1,11 @@
-package br.com.faculdade.jsf_controle_estoque.daos;
+package br.com.faculdade.jsf_camisascriativas.daos;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import br.com.faculdade.jsf_controle_estoque.models.Produto;
+import br.com.faculdade.jsf_camisascriativas.models.Produto;
 
 public class ProdutoDao {
 

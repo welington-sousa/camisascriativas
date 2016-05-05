@@ -1,4 +1,4 @@
-package br.com.faculdade.jsf_controle_estoque.models;
+package br.com.faculdade.jsf_camisascriativas.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

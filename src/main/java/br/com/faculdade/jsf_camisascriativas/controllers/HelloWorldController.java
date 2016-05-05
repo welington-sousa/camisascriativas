@@ -1,4 +1,4 @@
-package br.com.faculdade.jsf_controle_estoque.controllers;
+package br.com.faculdade.jsf_camisascriativas.controllers;
 
 import javax.enterprise.inject.Model;
 
