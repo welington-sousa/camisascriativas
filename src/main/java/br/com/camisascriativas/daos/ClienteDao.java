@@ -1,11 +1,11 @@
-package br.com.faculdade.jsf_camisascriativas.daos;
+package br.com.camisascriativas.daos;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import br.com.faculdade.jsf_camisascriativas.models.Cliente;
+import br.com.camisascriativas.models.Cliente;
 
 public class ClienteDao {
 

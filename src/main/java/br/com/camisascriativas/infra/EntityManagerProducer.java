@@ -1,4 +1,4 @@
-package br.com.faculdade.jsf_camisascriativas.infra;
+package br.com.camisascriativas.infra;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;

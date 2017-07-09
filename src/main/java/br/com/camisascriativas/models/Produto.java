@@ -1,4 +1,4 @@
-package br.com.faculdade.jsf_camisascriativas.models;
+package br.com.camisascriativas.models;
 
 import java.math.BigDecimal;
 

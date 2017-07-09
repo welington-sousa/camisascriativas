@@ -1,4 +1,4 @@
-package br.com.faculdade.jsf_camisascriativas.controllers;
+package br.com.camisascriativas.controllers;
 
 import javax.enterprise.inject.Model;
 

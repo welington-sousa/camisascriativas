@@ -1,4 +1,4 @@
-package br.com.faculdade.jsf_camisascriativas.controllers;
+package br.com.camisascriativas.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,8 +8,8 @@ import javax.enterprise.inject.Model;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 
-import br.com.faculdade.jsf_camisascriativas.daos.ClienteDao;
-import br.com.faculdade.jsf_camisascriativas.models.Cliente;
+import br.com.camisascriativas.daos.ClienteDao;
+import br.com.camisascriativas.models.Cliente;
 
 @Model
 @Transactional
