@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="jsf_camisascriativas">
+    <wb-module deploy-name="camisascriativas">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp"/>
-        <property name="java-output-path" value="/jsf_camisascriativas/target/classes"/>
-        <property name="context-root" value="jsf_camisascriativas"/>
+        <property name="java-output-path" value="/camisascriativas/target/classes"/>
+        <property name="context-root" value="camisascriativas"/>
     </wb-module>
 </project-modules>
